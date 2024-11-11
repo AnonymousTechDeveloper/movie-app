@@ -2,7 +2,7 @@ import genreList from './genreList.json'
 
 const accountID = 0;
 const accessToken = '';
-alert(accessToken + ' ' + accountID)
+
 const optionsGET = {
     method: 'GET',
     headers: {
