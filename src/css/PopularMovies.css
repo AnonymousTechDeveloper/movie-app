@@ -1,0 +1,131 @@
+.popular-movies-container {
+    background-color: var(--primary-bg-color);
+    width: 90%;
+    margin: auto;
+    aspect-ratio: 1920/1080;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.6s;
+}
+
+.popular-movie-info {
+    height: calc(100% - 36px);
+    width: 50%;
+    background-image: linear-gradient(90deg, black, #000c, #0006, transparent);
+    padding: 18px; 
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popular-movie-title {
+    color: var(--primary-font-color);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.movie-taglist {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+.movie-taglist span {
+    color: var(--primary-font-color);
+    font-family: var(--main-font);
+    text-wrap: nowrap;
+}
+.movie-taglist span:nth-child(2n) {
+    color: var(--secondary-font-color);
+}
+
+.movie-description-text {
+    color: var(--primary-font-color);
+    font-family: var(--main-font);
+}
+
+.nav-button-container {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    gap: 9px;
+    padding: 18px;
+}
+
+.nav-button {
+    border-radius: 100%;;
+    background-color: #0009;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 18px;
+    padding: 9px;
+    color: rgba(255, 255, 255, 0.597);
+}
+.nav-button:hover {opacity: 0.5;}
+
+.popular-movie-description-text {
+    color: var(--primary-font-color);
+    font-family: var(--main-font);
+}
+
+.popular-movie-button-wrapper {
+    margin-top: 9px;
+    display: flex;
+    gap: 18px;
+}
+.popular-movie-get-started-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-font-color);
+    font-family: var(--main-font);
+    padding: 9px 27px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    line-height: 21px;
+}
+.popular-movie-get-started-button:hover, .popular-movie-save-button:hover, .popular-movie-rate-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.popular-movie-save-button {
+    display: inline-block;
+    background-color: #0006;
+    color: var(--primary-font-color);
+    padding: 9px;
+    border-radius: 100%;
+    margin-bottom: 18px;
+    line-height: 21px;
+    width: 21px;
+    text-align: center;
+}
+.popular-movie-rate-button {
+    display: inline-block;
+    background-color: #0006;
+    color: #bcbc0b;
+    padding: 9px;
+    border-radius: 100%;
+    margin-bottom: 18px;
+    line-height: 21px;
+    width: 21px;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .popular-movies-container {width: 100%;}
+    .popular-movie-info {
+        width: 90%;
+        gap: 3px;
+    }
+}
+
+@media (max-width: 900px) {
+    .popular-movie-title {font-size: 27px;}
+    .popular-movie-description-text, .movie-taglist {font-size: 15px;}
+}

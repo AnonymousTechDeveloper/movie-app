@@ -1,0 +1,112 @@
+
+.navbar {
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar {
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 18px;
+    height: 36px;
+    display: flex;
+}
+
+.search-icon-wrapper {
+    line-height: 36px;
+    padding: 0px 9px;
+}
+
+.search-icon {
+    color: var(--secondary-font-color);
+}
+
+.search-field-wrapper {padding-right: 9px;}
+
+.search-field-wrapper > input {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    color: var(--secondary-font-color);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 16px;
+    width: 300px;
+}
+.search-field-wrapper > input:focus {outline: none;}
+
+.navbar-right {
+    display: flex;
+    gap: 27px;
+}
+
+.navbar-item-button {
+    color: var(--primary-font-color);
+    font-size: 27px;
+}
+
+.navbar-profile-pic {
+    aspect-ratio: 1.0;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    position: relative;
+    z-index: 10;
+}
+.navbar-user-details {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    border-radius: 18px;
+    background-color: #0000004f;
+    font-family: var(--main-font);
+    transition: opacity 0.6s;
+    font-weight: 400;
+    color: var(--primary-font-color);
+    right: 0px;
+    top: 45px;
+    padding: 9px;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+.navbar-user-details div {text-wrap: nowrap;}
+.navbar-user-details div:nth-child(1) {
+    color: var(--primary-font-color);
+    font-size: 16px;
+}
+.navbar-user-details div:nth-child(2) {
+    color: var(--secondary-font-color);
+    font-size: 15px;
+}
+.navbar-profile-pic:hover ~ .navbar-user-details {
+    opacity: 1;
+}
+.navbar-pp-underlay {
+    display: block;
+    position: absolute;
+    aspect-ratio: 1.0;
+    border-radius: 100%;
+    transform: translateX(-3px) translateY(calc(-50% - 2px));
+}
+.navbar-pp-underlay:nth-child(1) {
+    width: 42px;
+    height: 42px;
+    background-image: linear-gradient(45deg, rgb(255, 255, 255), rgb(0, 187, 255), rgb(255, 0, 217));
+}
+.navbar-pp-underlay:nth-child(2) {
+    width: 39px;
+    height: 39px;
+    background-color: #0f0f0f;
+    left: 1.5px;
+    z-index: 9;
+}
+
+.navbar-item-wrapper {position: relative;}
+
+@media (max-width: 600px) {
+    .navbar-left {flex-grow: 1; padding-right: 18px;}
+    .search-field-wrapper {flex-grow: 1;}
+    .search-field-wrapper > input {
+        width: 100%;
+    }
+}

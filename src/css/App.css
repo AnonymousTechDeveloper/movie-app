@@ -1,0 +1,62 @@
+:root {
+    --accent-color: #ad241a;
+    --primary-font-color: #e5e5e5;
+    --secondary-font-color: #585858;
+    --primary-bg-color: #5d5d5d;
+    --secondary-bg-color: #212121;
+    --heading-font: "Open Sans";
+    --main-font: "Lato";
+    --netflix-font: "Bebas Neue"
+}
+
+@font-face {
+    src: url('../assets/fonts/Lato-Regular.ttf');
+    font-family: "Lato";
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('../assets/fonts/BebasNeue-Regular.ttf');
+}
+
+body {
+    background-color: #0f0f0f;
+}
+
+.App {
+    display: flex;
+}
+
+.vertically-centered-element {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.app-content {
+    width: 100%;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+}
+
+::-webkit-scrollbar {width: 6px;}
+::-webkit-scrollbar-track {background-color: #0002;}
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 18px;
+}
+::-webkit-scrollbar-thumb {opacity: 0.8;}
+
+@media (max-width: 900px) {
+    .app-content {
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 30px;
+    }
+}

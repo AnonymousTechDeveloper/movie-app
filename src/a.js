@@ -1,0 +1,1 @@
+theMovieDb.common.api_key = "5deb8f2b13e7ad7b0a51912d72143f82";

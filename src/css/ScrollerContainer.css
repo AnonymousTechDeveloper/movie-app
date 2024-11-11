@@ -1,0 +1,84 @@
+.movie-card {
+    max-width: 210px;
+    min-width: 210px;
+    height: 90px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 18px;
+    padding: 9px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.movie-card-desciption {
+    position: absolute;
+    bottom: 9px;
+    font-weight: 600;
+    font-size: 16px;
+    width: calc(100% - 18px);
+}
+.movie-card-title {
+    color: var(--primary-font-color);
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+.movie-card-genre-list {
+    color: var(--secondary-font-color);
+    display: flex;
+    font-size: 13px;
+    gap: 3px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 159px;
+}
+.movie-card-genre-list span {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.movie-card-info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adult-rating-label {
+    display: inline-block;
+    font-family: var(--main-font);
+    font-weight: 900;
+    color: var(--primary-font-color);
+    font-size: 9px;
+    background-color: rgb(224, 18, 18);
+    width: 15px;
+    height: 15px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    padding: 3px;
+    line-height: 15px;
+}
+
+.movie-card-rating > .rating-star {color: rgb(189, 189, 11)}
+.movie-card-rating {
+    color: var(--primary-font-color);
+    font-size: 13px;
+    width: 42px;
+}
+
+.not-found-container {
+    margin: auto;
+    padding: 36px;
+    font-family: var(--heading-font);
+    color: var(--secondary-font-color);
+    font-weight: 600;
+    font-size: 21px;
+    text-align: center;
+}
+.not-found-container span {
+    color: #E50914;
+    font-family: var(--netflix-font);
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}

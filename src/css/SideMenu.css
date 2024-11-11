@@ -1,0 +1,26 @@
+.menu-bar {
+    z-index: 10;
+    position: fixed;
+    height: 100%;
+    width: 210px;
+    padding: 45px;
+    /* min-height: calc(100vh - 90px); */
+    border-right: 1px solid var(--secondary-bg-color);
+}
+
+.main-logo {
+    height: 30px;
+}
+
+@media (max-width: 900px) {
+    .menu-bar {
+        width: 100%;
+        height: fit-content;
+        background-color: #0f0f0f; 
+        padding: 18px 0px;
+    }
+    .main-logo {
+        display: block;
+        margin: auto;
+    }
+}

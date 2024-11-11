@@ -1,0 +1,124 @@
+.popup-backdrop {
+    background-color: rgba(0, 0, 0, 0.293);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    z-index: 101;
+}
+
+.movie-description-popup-wrapper {
+    overflow: hidden; 
+    border-radius: 9px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 9px;
+    height: 80%;
+    width: 80%;
+    z-index: 101;
+}
+
+.movie-description-popup {
+    border-radius: 9px;
+    background-color: black;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+.popup-image-wrapper {
+    position: relative;
+}
+
+.popup-image {
+    width: 100%;
+    min-height: 180px;
+}
+
+.popup-image-overlay {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent, #0004, #000000), radial-gradient(at bottom left, black, #0003, transparent);
+}
+
+.popup-title {
+    position: absolute;
+    bottom: 0px;
+    font-family: var(--heading-font);
+    color: var(--primary-font-color);
+    font-weight: 600;
+    font-size: 54px;
+    padding: 0px 18px;
+    width: 81%;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding: 0px 18px;
+}
+.tag-list span {
+    color: var(--primary-font-color);
+    font-family: var(--main-font);
+}
+.tag-list span:nth-child(2n) {
+    color: var(--secondary-font-color);
+}
+.movie-description-text {
+    color: var(--primary-font-color);
+    font-family: var(--main-font);
+}
+
+.movie-description-text, .movie-get-started-button-wrapper {padding: 18px;}
+
+.movie-get-started-button-wrapper {
+    display: flex;
+    gap: 9px;
+}
+
+.movie-get-started-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-font-color);
+    font-family: var(--main-font);
+    padding: 9px 27px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    line-height: 21px;
+}
+.movie-get-started-button:hover,.popular-movie-rate-button:hover, .popular-movie-save-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.popular-movie-save-button {
+    display: inline-block;
+    background-color: #ffffff2e;
+    color: var(--primary-font-color);
+    padding: 9px;
+    border-radius: 100%;
+    margin-bottom: 18px;
+    line-height: 21px;
+    width: 21px;
+    text-align: center;
+}
+.popular-movie-rate-button {
+    display: inline-block;
+    background-color: #ffffff2e;
+    color: #bcbc0b;
+    padding: 9px;
+    border-radius: 100%;
+    margin-bottom: 18px;
+    line-height: 21px;
+    width: 21px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .popup-title {font-size: 30px;}
+}

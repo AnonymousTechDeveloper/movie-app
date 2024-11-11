@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import { options } from './common';
+import NavBar from './components/NavBar';
+import SideMenu from './components/SideMenu';
+import MainBody from './components/MainBady';
+import MovieDescriptionPopup from './components/MovieDescriptionPopup';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const [searchQuery, setSearchQuery] = useState('');
+
+	const [movieDescriptionPopupState, setMovieDescriptionPopupState] = useState(false);
+	const [selectedMovieDateForPopup, setSelectedMovieDataForPopup] = useState(null);
+	const [favoriteMoviesList, setFavoriteMoviesList] = useState([]);
+  
+	const updateMovieDescriptionPopup = (movie) => {
+		setMovieDescriptionPopupState(!movieDescriptionPopupState);
+		setSelectedMovieDataForPopup(movie);
+		console.log(movie, "hehe")
+	}
+	  
+	return (
+		<div className='App'>
+			<SideMenu />
+			<div className='app-content'>
+				<NavBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+				<MainBody updateMovieDescriptionPopup={updateMovieDescriptionPopup} searchQuery={searchQuery} favoriteMoviesList={favoriteMoviesList} setFavoriteMoviesList={setFavoriteMoviesList} />
+			</div>
+			{movieDescriptionPopupState && <MovieDescriptionPopup className="movie-description-component" movie={selectedMovieDateForPopup} updateMovieDescriptionPopup={updateMovieDescriptionPopup} favoriteMoviesList={favoriteMoviesList} setFavoriteMoviesList={setFavoriteMoviesList} />}
+		</div>
+	);
 }
 
 export default App;
